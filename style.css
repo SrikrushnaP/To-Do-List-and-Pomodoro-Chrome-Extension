@@ -1,0 +1,197 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8c6c9;
+    color: #a44a66;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .mode-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+    margin-top: 1rem; /* Added space above the mode buttons */
+  }
+  
+  .mode {
+    background: transparent;
+    border: 1px solid #a44a66;
+    color: #a44a66;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .mode.active,
+  .mode:hover {
+    background: #fff;
+    color: #a44a66;
+  }
+  
+  .task-list {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  .task-list h2 {
+    font-size: 1.2rem;
+    color: #a44a66;
+    margin-bottom: 0.5rem;
+  }
+  
+  .task-input {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  #taskInput {
+    flex: 1;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  #addTaskButton {
+    background-color: #a44a66;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+  
+  #tasks {
+    list-style: none;
+    text-align: left;
+    padding: 0;
+  }
+  
+  .task-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+  }
+  
+  .task-actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .edit-task,
+  .delete-task {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #a44a66;
+    font-size: 0.9rem;
+  }
+  
+  .timer-display {
+    font-size: 4rem;
+    color: #a44a66;
+    margin-bottom: 1rem;
+  }
+  
+  #startStopButton {
+    background-color: #a44a66;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  #startStopButton:hover {
+    background-color: #d9788b;
+  }
+
+/* Style for completed tasks */
+.completed > .task-text {
+    text-decoration: line-through;
+    color: #ccc;
+  }
+  
+  /* Complete button styling */
+  .complete-task {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #28a745;
+    font-size: 0.9rem;
+  }
+  
+  /* Updated task-actions to add spacing */
+  .task-actions {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  
+  @media (max-width: 500px) {
+    .timer-display {
+      font-size: 3rem;
+    }
+  
+    #startStopButton {
+      font-size: 1rem;
+      padding: 0.6rem 1rem;
+    }
+  }
+  
+
+
+
+
+  .timer-container {
+    display: flex;
+    justify-content: center; /* Center the options */
+    align-items: center; /* Vertically center the options */
+    gap: 10px; /* Space between options */
+    padding: 10px 0;
+}
+
+.timer-option {
+    width: 40px; /* Set the width */
+    height: 40px; /* Set the height */
+    background-color: #a44a66; /* Button color */
+    color: white; /* Text color */
+    border-radius: 50%; /* Makes the button round */
+    display: flex; /* Use flexbox to center the text */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s; /* Smooth background change */
+}
+
+.timer-option:hover {
+    background-color: white; /* Darker shade on hover */
+    color: #a44a66;
+}
+
+.timer-option.selected {
+    background-color: white; /* Darker shade on hover */
+    color: #a44a66; /* Highlighted color when selected */
+}

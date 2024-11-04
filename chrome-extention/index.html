@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Timer Mode Buttons -->
+        <div class="mode-buttons">
+            <button id="pomodoro" class="mode active">Pomodoro</button>
+            <button id="shortBreak" class="mode">Short break</button>
+            <button id="longBreak" class="mode">Long break</button>
+        </div>
+
+        <!-- Timer Display -->
+        <div class="timer-display">
+            <span id="timer">25:00</span>
+        </div>
+
+        <!-- Task List -->
+        <div class="task-list">
+            <h2>Task List</h2>
+            <div class="task-input">
+                <input type="text" id="taskInput" placeholder="What do you have planned?">
+                <button id="addTaskButton">Add task</button>
+            </div>
+            <ul id="tasks"></ul>
+        </div>
+
+
+        <div class="timer-container">
+            <div class="timer-option" data-value="0.1">0.1</div>
+            <div class="timer-option" data-value="10">10</div>
+            <div class="timer-option" data-value="15">15</div>
+            <div class="timer-option" data-value="20">20</div>
+            <div class="timer-option" data-value="30">30</div>
+            <div class="timer-option" data-value="45">45</div>
+            <div class="timer-option" data-value="60">60</div>
+        </div>
+        <button id="startStopButton">START</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
